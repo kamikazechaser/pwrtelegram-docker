@@ -10,9 +10,9 @@ $ git clone https://github.com/kamikazechaser/pwrtelegram-docker.git
 
 $ cd pwrtelegram-docker
 
-$ sudo docker build -t pwrapi
+$ sudo docker build -t pwrtelegram .
 
-$ sudo docker run -name pwrapiinstance -i -t pwrapi
+$ sudo docker run -it pwrtelegram /install.sh docker configure
 ```
 
 ###Note

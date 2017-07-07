@@ -11,6 +11,7 @@ FROM ubuntu:14.04
 
 # Run system update
 RUN apt-get update
+RUN apt-get install wget nano lsb-release apt-utils systemd-services -y
 
 # Get file from repo
 
@@ -24,7 +25,7 @@ RUN chmod +x install.sh
 
 # Install
 
-RUN bash -e install.sh
+RUN bash -e install.sh docker
 
 ###############################
 # RUN API
@@ -43,12 +44,9 @@ RUN bash -e install.sh
 ################################
 
 # Expose port
-EXPOSE 8080
+EXPOSE 80
+EXPOSE 443
 
-# Start the API
-
-# Just an example 
-CMD ["/path/to/script/api.sh"]
 
 
 
